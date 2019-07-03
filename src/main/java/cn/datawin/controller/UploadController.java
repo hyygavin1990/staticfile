@@ -135,11 +135,7 @@ public class UploadController extends BaseController{
     }
 
     private boolean isWin(){
-        String osName = System.getProperty("os.name");
-        if(osName.toLowerCase().indexOf("windows")>-1){
-            return true;
-        }
-        return false;
+        return System.getProperty("os.name").toLowerCase().contains("windows");
     }
 
 
